@@ -1,6 +1,6 @@
 """
 Private vs Public Hospital - Admissions & Live Births
-Converted from Private_and_Public_Hospital.ipynb to run on GitHub Actions.
+Converted from Private_and_Public_Hospital.ipynb to run locally.
 
 Inputs : M870341.csv (SingStat hospital admissions), sdb-1h-2026.xlsx (tab T9, live births)
 Outputs: hospital_admissions_and_live_births_2026.csv + chart PNGs in the 'output' subfolder
@@ -17,10 +17,9 @@ import seaborn as sns
 # ==========================================
 # Paths
 # ==========================================
-# Repo layout: data/ holds the two input files, output/ receives the results
-PROJECT_DIR = Path(__file__).resolve().parent
-ADMISSIONS_FILE = PROJECT_DIR / "data" / "M870341.csv"
-BIRTHS_FILE = PROJECT_DIR / "data" / "sdb-1h-2026.xlsx"
+PROJECT_DIR = Path(r"C:\Users\20263519\OneDrive - Mount Alvernia Hospital\BASP - Documents\02. Projects\20261007 Script for Private-Public Dataset")
+ADMISSIONS_FILE = PROJECT_DIR / "M870341.csv"
+BIRTHS_FILE = PROJECT_DIR / "sdb-1h-2026.xlsx"
 OUTPUT_DIR = PROJECT_DIR / "output"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
